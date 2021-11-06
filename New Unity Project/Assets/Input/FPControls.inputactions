@@ -7,9 +7,9 @@
             "actions": [
                 {
                     "name": "CameraLook",
-                    "type": "Button",
+                    "type": "Value",
                     "id": "15d06627-d571-4e63-bea5-149d0c8506a5",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
                 },
@@ -25,23 +25,12 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "d26ec0b4-d715-47d5-8002-a9c52867aa1b",
-                    "path": "",
+                    "id": "019c03db-2963-4def-a07f-f258f263c0b2",
+                    "path": "<Mouse>/delta",
                     "interactions": "",
                     "processors": "",
-                    "groups": "",
+                    "groups": "Keyboard and Mouse",
                     "action": "CameraLook",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cc6a109e-df63-4134-ba1d-2c5b9a661886",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "PlayerMove",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
