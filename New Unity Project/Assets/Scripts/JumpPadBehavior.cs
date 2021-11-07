@@ -10,7 +10,7 @@ public class JumpPadBehavior : MonoBehaviour
     // OnTriggerEnter is called when the Collider other enters the trigger
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if(other.CompareTag("Player"))
         {
             Rigidbody playerRb = other.GetComponent<Rigidbody>();
 
@@ -18,11 +18,7 @@ public class JumpPadBehavior : MonoBehaviour
         }
     }
 
-    // OnTriggerExit is called when the Collider other has stopped touching the trigger
-    private void OnTriggerExit(Collider other)
-    {
-       
-    }
+   
 }
 
 
