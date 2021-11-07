@@ -11,7 +11,7 @@ public class GateBevahior : MonoBehaviour
 
         if(other.CompareTag("Player"))
         {
-            gameObject.BroadcastMessage("OpenGate");
+            gameObject.BroadcastMessage("CloseGate");
         }
         
     }
@@ -21,7 +21,7 @@ public class GateBevahior : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            gameObject.BroadcastMessage("CloseGate");
+            gameObject.BroadcastMessage("OpenGate");
         }
 
     }
