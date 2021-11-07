@@ -6,19 +6,25 @@ using UnityEngine.InputSystem;
 public class FPMovement : MonoBehaviour
 {
     // Player's movement parameters
-    public Vector3 direction;
-    public float speed;
+    public Vector3 direction; // The player's direction at any given time
+    public float speed; // The player's speed at any given time
+
+    public Rigidbody rb; // The player's rigidbody
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    // All physics calculations happen in FixedUpdate
+    void FixedUpdate()
     {
-        transform.Translate(direction * speed * Time.deltaTime);
+        // transform.Translate(direction * speed * Time.deltaTime);
+        // make world direction into local direction
+        Vector3 localDirection = transform.TransformDirection(direction);
+        // move using physics
+        rb.MovePosition(rb.position + (localDirection * speed * Time.deltaTime));
     }
 
     // OnPlayerMove event handler
