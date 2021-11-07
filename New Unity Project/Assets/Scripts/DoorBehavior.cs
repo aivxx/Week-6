@@ -25,10 +25,10 @@ public class DoorBehavior : MonoBehaviour
     public void CloseGate()
     {
         //Without Coroutines
-        //transform.Translate(movementAxis * distance * -1f, Space.World);
+        transform.Translate(movementAxis * distance * -1f, Space.World);
 
         //Basic Coroutine in Frames
-        //StartCoroutine(DoorMove(openPos, closedPos, 1 / frames)); //door glitches out
+        StartCoroutine(DoorMove(openPos, closedPos, 1 / frames)); //door glitches out
 
         //Fix door jump glitch by stopping already running coroutines and startin from current position
         StopAllCoroutines(); //add to stop previously running coroutines
@@ -38,10 +38,10 @@ public class DoorBehavior : MonoBehaviour
     public void OpenGate()
     {
         //Without Coroutines
-        //transform.Translate(movementAxis * distance, Space.World);
+        transform.Translate(movementAxis * distance, Space.World);
 
         //Basic Coroutine in Frames
-        //StartCoroutine(DoorMove(closedPos, openPos, 1 / frames)); //door glitches out
+        StartCoroutine(DoorMove(closedPos, openPos, 1 / frames)); //door glitches out
 
         //Fix door jump glitch by stopping already running coroutines and startin from current position
         StopAllCoroutines();
